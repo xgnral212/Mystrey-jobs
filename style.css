@@ -1,0 +1,259 @@
+/* Basic Reset & Body Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background */
+    color: #f0f0f0; /* Light text for contrast */
+    line-height: 1.6;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Container for responsiveness (optional, but good practice) */
+.container {
+    width: 90%; /* Wider container */
+    max-width: 1200px; /* Max width for large screens */
+    margin: auto;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+/* Header */
+header {
+    background: #0d0d0d; /* Even darker header */
+    color: #fff;
+    padding: 1.5rem 0; /* More padding */
+    text-align: center;
+    border-bottom: 5px solid #E74C3C; /* Bold red border */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.2em; /* Larger title */
+    letter-spacing: 2px; /* Spaced out letters */
+    text-transform: uppercase; /* Uppercase */
+    color: #E74C3C; /* Red title */
+}
+
+header p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: 15px auto;
+    color: #bbb; /* Slightly darker white */
+}
+
+/* Navigation Buttons */
+nav {
+    margin-top: 25px; /* More space */
+}
+
+.nav-btn {
+    background: #222; /* Dark button background */
+    color: #fff;
+    padding: 12px 25px; /* Larger buttons */
+    border: 2px solid #444; /* Dark border */
+    border-radius: 8px; /* Slightly more rounded */
+    cursor: pointer;
+    margin: 0 8px;
+    font-size: 1.1em;
+    transition: all 0.3s ease; /* Smooth transitions for all properties */
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-btn:hover {
+    background: #E74C3C; /* Red on hover */
+    border-color: #E74C3C;
+    transform: translateY(-3px); /* Slight lift effect */
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4); /* Red glow effect */
+}
+
+/* Main Content */
+main {
+    padding: 30px; /* More padding */
+    max-width: 900px;
+    margin: 30px auto; /* More margin */
+    background: #222; /* Darker main background */
+    border-radius: 12px; /* More rounded corners */
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    border: 1px solid #333; /* Subtle border */
+}
+
+/* Page Sections */
+.page-section {
+    display: none; /* Hidden by default */
+    animation: fadeIn 0.8s ease-out; /* Fade in animation */
+}
+
+.page-section.active {
+    display: block; /* Shown when active */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Job Listings / Job Details */
+.job-listings, .job-details {
+    margin-bottom: 40px; /* More space */
+}
+
+.job-listings h2, .job-details h2 {
+    color: #E74C3C; /* Red headings */
+    text-align: center;
+    margin-bottom: 30px; /* More space */
+    font-size: 2.5em; /* Larger headings */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #444; /* Subtle separator */
+    padding-bottom: 10px;
+}
+
+.job-card {
+    background: #2b2b2b; /* Slightly lighter dark for cards */
+    border: 1px solid #3a3a3a; /* Dark border */
+    padding: 25px; /* More padding */
+    margin-bottom: 20px;
+    border-radius: 10px; /* More rounded */
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Card shadow */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.job-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.job-card h3 {
+    color: #E74C3C; /* Red for job titles */
+    margin-top: 0;
+    font-size: 1.8em;
+    text-transform: capitalize;
+}
+
+.job-card p {
+    margin-bottom: 20px;
+    color: #ccc; /* Lighter text for descriptions */
+}
+
+/* Buttons (Main CTA) */
+.btn {
+    display: inline-block;
+    background: #E74C3C; /* Primary Red */
+    color: #fff;
+    padding: 12px 28px; /* Larger padding */
+    text-decoration: none;
+    border: none;
+    border-radius: 6px; /* Slightly less rounded than nav buttons */
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    margin: 5px; /* Added margin for buttons next to each other */
+}
+
+.btn:hover {
+    background: #C0392B; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3), 0 0 15px rgba(231, 76, 60, 0.6); /* Subtle red glow */
+}
+
+.btn:disabled {
+    background-color: #555; /* Darker disabled state */
+    color: #999;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* Leave Job Button Specifics */
+.leave-job-btn {
+    background-color: #444; /* Darker grey for leave button */
+    border: 1px solid #666;
+}
+
+.leave-job-btn:hover {
+    background-color: #666; /* Lighter grey on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Specific Miner Styles */
+#minerJobControls, #recyclerJobControls {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#miningArea {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#rockImage {
+    border: 3px solid #E74C3C; /* Red border for the rock */
+    border-radius: 8px;
+    display: block;
+    margin: 25px auto;
+    box-shadow: 0 0 15px rgba(231, 76, 60, 0.3); /* Subtle red glow around rock */
+}
+
+#minerResourceResult {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2ECC71; /* Green for resource success */
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Specific Recycler Styles */
+#recyclerJobStatus {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #E74C3C; /* Red for status messages */
+    margin-bottom: 15px;
+}
+
+#puzzleContainer {
+    background-color: #2b2b2b; /* Dark background for puzzles */
+    padding: 25px;
+    border-radius: 10px;
+    border: 1px solid #3a3a3a;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+}
+
+#puzzleContainer h3 {
+    color: #E74C3C; /* Red puzzle titles */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+#puzzleContainer p {
+    color: #ccc;
+}
+
+#recyclerResourceResult {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #2ECC71; /* Green for resource success */
+    margin-top: 20px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #0d0d0d; /* Dark footer */
+    color: #888; /* Muted text color */
+    margin-top: 40px;
+    border-top: 5px solid #E74C3C; /* Bold red border */
+    font-size: 0.9em;
+}
